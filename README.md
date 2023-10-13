@@ -1,4 +1,58 @@
-# Getting Started with Create React App
+# Netflix-gpt
+
+- First we create our React app using command npx create-react-app netflix-gpt
+- Configured tailwind CSs
+
+# Features we are going to build with
+
+-Login/Sign Up
+    -Sign in/Sign up Form
+    -redirect to Browse Page
+-Browse(after authentication)
+    -Header
+    -Main Movie
+        -Trailer in background
+        -Title & Description
+        -MovieSuggestions
+            -MovieLists * N
+-Netflix-GPT
+    -search Bar
+    -Movie Suggestions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +121,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
