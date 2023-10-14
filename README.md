@@ -1,7 +1,9 @@
 # Netflix-gpt
 
 - First we create our React app using command npx create-react-app netflix-gpt
-- Configured tailwind CSs
+- Configured tailwind Css
+- Header
+- Login form
 
 # Features we are going to build with
 
