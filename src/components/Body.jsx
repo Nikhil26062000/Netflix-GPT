@@ -7,8 +7,9 @@ import { RouterProvider } from 'react-router-dom'
 const Body = () => {
 
     const appRouter = createBrowserRouter([
-        { path: '/',
-          element:<Login />,  
+        { path: '/Netflix-GPT',
+          element:<Login />,
+            
         },
         {
             path:'/browse',
