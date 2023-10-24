@@ -4,6 +4,14 @@
 - Configured tailwind Css
 - Header
 - Login form
+- Sign Up form
+- Form Validation
+- useRef HOOK
+- Firebase Setup
+- Deploying our app to production
+- create Signup User Account
+- Implement Sign user API
+- Created Redux Store with userSlice
 
 # Features we are going to build with
 
