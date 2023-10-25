@@ -15,6 +15,8 @@
 - Create user profile pic and sign out button in Browse page
 - Updating the store with user details
 - Implemented Signout features
+- BugFix : If user is not login he was easily redirecting to browse page and vice-versa
+- Unsubscribed to the onAuthStateChanged callback
 
 # Features we are going to build with
 

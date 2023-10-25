@@ -1,25 +1,56 @@
 import { signOut } from 'firebase/auth';
-import React from 'react'
+import React,{ useEffect }  from 'react'
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../utils/firebase';
 import Button from "@mui/material/Button";
 import { useSelector } from 'react-redux'
+import { addUser, removeUser } from "../utils/userSlice";
+import { onAuthStateChanged } from "firebase/auth";
+import { useDispatch } from "react-redux";
 
 
 const Header = () => {
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const user = useSelector((store) => store.user)
 
   //Building Signout logic Using signOut API
     const handleSignOut = () => {
       signOut(auth).then(() => {
         // Sign-out successful.
-        navigate('/Netflix-GPT/')
+       
       }).catch((error) => {
         // An error happened.
       });
     }
+
+
+
+    useEffect(() => {
+     const unsubscribe =onAuthStateChanged(auth, (user) => {
+        if (user) {
+          const { uid, email, displayName, photoURL } = user;
+          dispatch(
+            addUser({
+              uid: uid,
+              email: email,
+              displayName: displayName,
+              photoURL: photoURL,
+            })
+          );
+          // ...
+          navigate("/Netflix-GPT/browse");
+        } else {
+          // User is signed out
+          dispatch(removeUser());
+          navigate("/Netflix-GPT/");
+        }
+      });
+      
+      return ()=>unsubscribe();
+
+    }, []);
   return (
     <div className='flex bg-gradient-to-b from-black justify-between z-10 absolute w-full'>
     <div className="Header">

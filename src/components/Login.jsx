@@ -8,7 +8,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
+
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 
@@ -17,7 +17,7 @@ const Login = () => {
   const [isSign, setIsSign] = useState(true);
   const [errorMessage, setErrorMessage] = useState();
 
-  const navigate = useNavigate();
+
   const dispatch = useDispatch();
   
 
@@ -57,7 +57,7 @@ const Login = () => {
             );
             // Profile updated!
             // ...
-            navigate("/Netflix-GPT/browse")
+           
           }).catch((error) => {
             // An error occurred
             // ...
@@ -90,7 +90,7 @@ const Login = () => {
           console.log("Sucessful sign in");
           setErrorMessage("SIGNED IN SUCCESSFULLY");
           console.log(user);
-          navigate("/Netflix-GPT/browse")
+   
           // ...
         })
         .catch((error) => {
