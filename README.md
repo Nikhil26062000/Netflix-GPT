@@ -12,6 +12,9 @@
 - create Signup User Account
 - Implement Sign user API
 - Created Redux Store with userSlice
+- Create user profile pic and sign out button in Browse page
+- Updating the store with user details
+- Implemented Signout features
 
 # Features we are going to build with
 

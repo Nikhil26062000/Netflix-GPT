@@ -5,17 +5,26 @@ import { validate } from "../utils/validate";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
+
 
 const Login = () => {
   const [isSign, setIsSign] = useState(true);
   const [errorMessage, setErrorMessage] = useState();
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  
+
+  const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
+  
 
   const clickedSignInSignUp = () => {
     // console.log(email.current.value);
@@ -34,10 +43,30 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
+          updateProfile(user, {
+            displayName: name.current.value, photoURL: "https://media.licdn.com/dms/image/D4D35AQEOYQ9FSB4S5w/profile-framedphoto-shrink_400_400/0/1682055574079?e=1698847200&v=beta&t=jAHWgVNKjKQHm4Bl5sNFJLNBVw1Y7J6WdjkNne5eGgE"
+          }).then(() => {
+            const { uid, email, displayName, photoURL } = auth.currentUser
+            dispatch(
+              addUser({
+                uid: uid,
+                email: email,
+                displayName: displayName,
+                photoURL: photoURL,
+              })
+            );
+            // Profile updated!
+            // ...
+            navigate("/Netflix-GPT/browse")
+          }).catch((error) => {
+            // An error occurred
+            // ...
+            setErrorMessage(error.message);
+          });
           console.log("Sign Up successfully");
           setErrorMessage("SIGNED UP SUCCESSFULLY");
           console.log(user);
-          navigate("/Netflix-GPT/browse")
+          
           // ...
         })
         .catch((error) => {
@@ -81,7 +110,7 @@ const Login = () => {
       <Header />
       <div className="backgroundImage absolute">
         <img
-          src="https://screencraft.org/wp-content/uploads/2021/08/Theaters-or-Streamers-StreamYard-1280x720-BG-768x432.png"
+          src="https://assets.nflxext.com/ffe/siteui/vlv3/a73c4363-1dcd-4719-b3b1-3725418fd91d/fe1147dd-78be-44aa-a0e5-2d2994305a13/IN-en-20231016-popsignuptwoweeks-perspective_alpha_website_small.jpg"
 
           alt="backgroundImage"
         />
@@ -97,6 +126,7 @@ const Login = () => {
 
         {!isSign && (
           <input
+            ref={name}
             type="text"
             placeholder="Full Name"
             className="inputBox p-4 my-4 w-full"
