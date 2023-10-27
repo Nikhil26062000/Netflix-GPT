@@ -18,6 +18,9 @@
 - BugFix : If user is not login he was easily redirecting to browse page and vice-versa
 - Unsubscribed to the onAuthStateChanged callback
 - Made constant.js to add constant variable in one place
+- Register on TMDB website and get the API ACCESS TOKEN
+- Fetch data from TMDB API and update that data in store 
+- Made our custom hook to make code more readable
 
 # Features we are going to build with
 
