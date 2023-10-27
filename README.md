@@ -17,6 +17,7 @@
 - Implemented Signout features
 - BugFix : If user is not login he was easily redirecting to browse page and vice-versa
 - Unsubscribed to the onAuthStateChanged callback
+- Made constant.js to add constant variable in one place
 
 # Features we are going to build with
 

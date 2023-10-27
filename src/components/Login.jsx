@@ -11,6 +11,7 @@ import { auth } from "../utils/firebase";
 
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { bgImage, userIcon } from "../utils/constant";
 
 
 const Login = () => {
@@ -44,7 +45,7 @@ const Login = () => {
           // Signed up
           const user = userCredential.user;
           updateProfile(user, {
-            displayName: name.current.value, photoURL: "https://media.licdn.com/dms/image/D4D35AQEOYQ9FSB4S5w/profile-framedphoto-shrink_400_400/0/1682055574079?e=1698847200&v=beta&t=jAHWgVNKjKQHm4Bl5sNFJLNBVw1Y7J6WdjkNne5eGgE"
+            displayName: name.current.value, photoURL: userIcon
           }).then(() => {
             const { uid, email, displayName, photoURL } = auth.currentUser
             dispatch(
@@ -110,7 +111,7 @@ const Login = () => {
       <Header />
       <div className="backgroundImage absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/a73c4363-1dcd-4719-b3b1-3725418fd91d/fe1147dd-78be-44aa-a0e5-2d2994305a13/IN-en-20231016-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+          src={bgImage}
 
           alt="backgroundImage"
         />
