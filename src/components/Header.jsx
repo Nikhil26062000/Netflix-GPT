@@ -53,12 +53,12 @@ const Header = () => {
 
     }, []);
   return (
-    <div className='Header flex bg-gradient-to-b from-black justify-between z-10 absolute w-full'>
+    <div className='Header flex bg-gradient-to-b from-black justify-between z-50 fixed w-full'>
     <div>
         <img className='w-44 py-2 px-4' src={logo} alt="logo"/>
     </div>
 
-    {user && <div className="flex justify-between my-5 gap-3 mr-8">
+    {user && <div className="flex justify-between py-5 gap-3 pr-8">
         <img
           src={userIcon}
           alt="userIcon"

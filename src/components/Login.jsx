@@ -64,9 +64,9 @@ const Login = () => {
             // ...
             setErrorMessage(error.message);
           });
-          console.log("Sign Up successfully");
+          // console.log("Sign Up successfully");
           setErrorMessage("SIGNED UP SUCCESSFULLY");
-          console.log(user);
+          // console.log(user);
           
           // ...
         })
@@ -74,7 +74,7 @@ const Login = () => {
           const errorCode = error.code;
           const errorMessage = error.message;
 
-          console.log("Error : " + errorCode, errorMessage);
+          // console.log("Error : " + errorCode, errorMessage);
           setErrorMessage("Something went Wrong");
           // ..
         });
@@ -88,16 +88,16 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log("Sucessful sign in");
+          // console.log("Sucessful sign in");
           setErrorMessage("SIGNED IN SUCCESSFULLY");
-          console.log(user);
+          // console.log(user);
    
           // ...
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          console.log(errorCode + "-" + errorMessage);
+          // console.log(errorCode + "-" + errorMessage);
           setErrorMessage("Credentials not Valid...");
         });
     }

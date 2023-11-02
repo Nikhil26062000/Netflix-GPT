@@ -22,6 +22,24 @@
     text-transform: capitalize!important;
 }
 
+.playButton{
+    background-color:white !important;
+    color: black !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+}
+
+.moreInfoButton{
+    background-color: rgb(162, 162, 162) !important;
+    color: white !important;
+    text-transform: capitalize !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+
+}
+
+
+
 @media only screen and (max-width: 1250px) {
     /* .formStyle{
         width: 400px !important;
