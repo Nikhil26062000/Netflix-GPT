@@ -21,6 +21,8 @@
 - Register on TMDB website and get the API ACCESS TOKEN
 - Fetch data from TMDB API and update that data in store 
 - Made our custom hook to make code more readable
+- Made  2 container where in first one video background and title is present and in secondary container we have different category of movies
+- made different custom hooks for different categories of movies
 
 # Features we are going to build with
 
