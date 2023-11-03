@@ -6,6 +6,10 @@
     background: #333!important;
 }
 
+.Header{
+    z-index: 60!important;
+}
+
 .backgroundImage > img{
     height: 100vh !important;
     width: 100vw !important;
@@ -36,9 +40,17 @@
     font-weight: bold !important;
     font-size: 18px !important;
 
+
 }
 
 
+/**
+    THIS BELOW LINE OF CODE HIDES THE SCROLLBAR
+*/
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 
 @media only screen and (max-width: 1250px) {
     /* .formStyle{

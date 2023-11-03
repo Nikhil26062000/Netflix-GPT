@@ -8,10 +8,10 @@ const VideoBackground = ({ movieId }) => {
 
   // fetching key from Redux store
   const trailerVideo = useSelector((store) => store.movies?.movieTrailer);
-  console.log(trailerVideo?.key);
+  // console.log(trailerVideo?.key);
 
   return (
-    <div className="relative z-0 w-screen h-screen overflow-hidden">
+    <div className="relative z-10 w-screen h-screen overflow-hidden">
       <iframe
         className="w-screen aspect-video"
         src={
