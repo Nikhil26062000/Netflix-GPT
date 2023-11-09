@@ -3,6 +3,7 @@ import Login from "./Login";
 import Browse from "./Browse";
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
+import GptSearchPage from "./GptSearchPage";
 
 const Body = () => {
   const appRouter = createBrowserRouter([
@@ -11,6 +12,7 @@ const Body = () => {
       path: "/Netflix-GPT/browse",
       element: <Browse />,
     },
+    
   ]);
 
   return (

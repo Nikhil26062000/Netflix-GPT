@@ -13,7 +13,7 @@ export const usePopularMovies = () => {
         // fetching data of popular movies from tmdb api
         const data = await fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', API_OPTIONS);
         const json = await data.json();
-        console.log(json);
+    
 
         // storing the popular movies in Redux store
         dispatch(addPopularMovie(json.results))

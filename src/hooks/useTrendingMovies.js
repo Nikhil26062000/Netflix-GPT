@@ -15,7 +15,7 @@ export const useTrendingMovies = () => {
         // fetching data of popular movies from tmdb api
         const data = await fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', API_OPTIONS);
         const json = await data.json();
-        console.log(json);
+  
 
         // storing the popular movies in Redux store
         dispatch(addTrendingMovie(json.results))
