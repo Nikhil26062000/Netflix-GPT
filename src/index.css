@@ -47,6 +47,38 @@
 
 .gptPageSearchButton{
     margin-top: 5px !important;
+    background-color:#d62832!important;
+}
+
+.gptButton{
+    background-color:#d62832!important;
+}
+
+.hoverDiv{
+    position: absolute!important;
+    top: 55px !important;
+    right: 25px !important;
+    display: none !important;
+}
+
+.userIcon{
+    cursor: pointer;
+}
+
+.userIcon:hover .hoverDiv{
+    display: block!important;
+}
+
+.icon{
+    margin-right: 10px!important;
+    color: #fff !important;
+}
+
+.liststyle{
+    color: white !important;
+}
+.arrowIcon{
+    color: #fff !important;
 }
 
 
