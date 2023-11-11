@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import GptSearchPage from "./GptSearchPage";
 
 
+
 const Browse = () => {
 
 
@@ -30,7 +31,10 @@ const Browse = () => {
           !gptView ? <>
           <MainContaineer/>
           <SecondaryContaineer/>
-          </> : <GptSearchPage/>
+          
+          </> : <><GptSearchPage/>
+          
+          </>
         }
        
       </div>
