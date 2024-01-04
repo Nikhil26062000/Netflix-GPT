@@ -5,7 +5,7 @@ import MovieCard from './MovieCard';
 const MovieList = ({title,movies}) => {
     // console.log(movies);
   return (
-    <div className=" bg-black text-white px-12 ">
+    <div className=" bg-black text-white px-12 max-sm:px-5 ">
     <h2 className=" font-semibold text-2xl absolute z-50">{title}</h2>
     <div className='movieList flex overflow-x-scroll'>
      

@@ -29,16 +29,16 @@
 .playButton{
     background-color:white !important;
     color: black !important;
-    font-weight: bold !important;
-    font-size: 18px !important;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .moreInfoButton{
     background-color: rgb(162, 162, 162) !important;
     color: white !important;
     text-transform: capitalize !important;
-    font-weight: bold !important;
-    font-size: 18px !important;
+    font-weight: bold;
+    font-size: 18px;
 
 
 }
@@ -52,6 +52,10 @@
 
 .gptButton{
     background-color:#d62832!important;
+    width: 110px!important;
+    height: 30px!important;
+    padding: 15px!important;
+    font-size: 12px !important;
 }
 
 .hoverDiv{
@@ -79,6 +83,10 @@
 }
 .arrowIcon{
     color: #fff !important;
+}
+
+.anim{
+    transition: all .5s ease!important;
 }
 
 

@@ -70,7 +70,7 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
   return (
-    <div className="Header flex bg-gradient-to-b from-black justify-between  fixed w-full">
+    <div className="Header flex bg-gradient-to-b from-black justify-between  fixed w-full max-md:bg-black max-md:absolute">
       <div>
         <img className="w-44 py-2 px-4" src={logo} alt="logo" />
       </div>
@@ -95,7 +95,7 @@ const Header = () => {
             variant="contained"
             onClick={handleGptSearch}
           >
-            {gptView ? "Home Page" : "GptSearch"}
+            {gptView ? "Home" : "GptSearch"}
           </Button>
 
           <div className="userIcon">
